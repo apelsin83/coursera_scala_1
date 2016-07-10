@@ -129,6 +129,15 @@ import org.scalatest.junit.JUnitRunner
     assert(max(List(3, 7, 2)) === 7)
   }
 
+  test("max of negative numbers") {
+    assert(max(List(-3, -7, -2)) === -2)
+  }
 
+
+  test("Max throws an exception if its argument is empty list") {
+    intercept[NoSuchElementException] {
+      max(List())
+    }
+  }
 
 }
