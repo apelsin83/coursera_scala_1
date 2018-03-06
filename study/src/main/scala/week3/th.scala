@@ -1,10 +1,8 @@
-package week4
+package week3
 
 class th {
 
 }
-
-import week4.{Cons, Nil}
 
 
 //object nth {
