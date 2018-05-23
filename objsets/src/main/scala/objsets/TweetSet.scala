@@ -142,14 +142,16 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
   def isEmpty: Boolean = false
 
   def mostRetweeted: Tweet = {
+
     def maxRetw(tweet1: Tweet, tweet2: Tweet): Tweet =
       if (tweet1.retweets > tweet2.retweets) tweet1
       else tweet2
 
-    if (left.isEmpty && right.isEmpty) elem
-    else if (left.isEmpty) maxRetw(right.mostRetweeted, elem)
-    else if (right.isEmpty) maxRetw(left.mostRetweeted, elem)
-    else maxRetw(left.mostRetweeted, maxRetw(left.mostRetweeted, elem))
+    maxRetw(
+      if (left.isEmpty) elem else left.mostRetweeted,
+      if (right.isEmpty) elem else right.mostRetweeted
+    )
+
 
   }
 
