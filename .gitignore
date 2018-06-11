@@ -21,3 +21,4 @@ project/plugins/project/
 .idea/
 .vscode/
 .DS_Store
+.ensime_cache/
