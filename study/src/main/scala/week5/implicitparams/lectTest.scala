@@ -17,10 +17,11 @@ object lectTest {
   }
 
   def main(args: Array[String]): Unit = {
-    val inList = true
+    val inList = false
     check1(1000000000, inList)
     check2(1000000000, inList)
-    check3(1000000000, inList)
+    // check3(1000000000, inList)
+    check4(1000000000, inList)
   }
 
   def check1(n: Int, inl: Boolean): Unit = {
@@ -66,5 +67,16 @@ object lectTest {
     }
 
     println("Enum: ", (System.nanoTime - t1) / 1000000000.0)
+  }
+
+  def check4(n: Int, inl: Boolean): Unit = {
+    val searchTerm = if (inl) "asdad" else "zz"
+    val t1 = System.nanoTime
+    val data = Set("C","F","x","xx","y","yy","z","zz")
+    for (i <- 1 to n) {
+      data contains searchTerm
+    }
+
+    println("Set: ", (System.nanoTime - t1) / 1000000000.0)
   }
 }
