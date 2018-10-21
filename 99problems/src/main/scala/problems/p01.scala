@@ -13,13 +13,12 @@ package problems
 
 object p01 {
 
-  def main(args: Array[String]) = {
-
+  def main(args: Array[String]): Unit = {
     println(lastElement(List(('a', 1))))
   }
 
 
-  def lastElement[T](lst: List[T]) = {
+  def lastElement[T](lst: List[T]): T = {
     lst.last
   }
 
