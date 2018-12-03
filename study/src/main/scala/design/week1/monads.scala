@@ -15,7 +15,7 @@ object monads {
     def flatMap[U](f: T => M[U]): M[U]
   }
 
-  def unit[T](x: T): M[T]
+ // def unit[T](x: T): M[T]
 
   /*
   pass by value (expr: => T)

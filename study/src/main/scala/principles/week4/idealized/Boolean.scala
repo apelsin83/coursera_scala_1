@@ -1,33 +1,33 @@
-package week4.idealized
+// package week4.idealized
 
-abstract class Boolean {
+// abstract class Boolean {
 
-  def ifThenElse[T](t: => T, e: => T): T
+//   def ifThenElse[T](t: => T, e: => T): T
 
-  def && (x: Boolean): Boolean = ifThenElse(x, false)
+//   def && (x: Boolean): Boolean = ifThenElse(x, false)
 
-  def || (x: Boolean): Boolean = ifThenElse(true, x)
+//   def || (x: Boolean): Boolean = ifThenElse(true, x)
 
-  def unary_! : Boolean = ifThenElse(false, true)
-
-
-  def == (x: Boolean): Boolean = ifThenElse(x, x.unary_!)
-
-  def != (x: Boolean): Boolean = ifThenElse(x.unary_!, x)
-
-  def < (x: Boolean): Boolean = ifThenElse(false, x)
+//   def unary_! : Boolean = ifThenElse(false, true)
 
 
-}
+//   def == (x: Boolean): Boolean = ifThenElse(x, x.unary_!)
 
-object True extends Boolean {
+//   def != (x: Boolean): Boolean = ifThenElse(x.unary_!, x)
 
-  def ifThenElse[T](t: => T, e: => T): Boolean = t
+//   def < (x: Boolean): Boolean = ifThenElse(false, x)
 
-}
 
-object False extends Boolean {
+// }
 
-  def ifThenElse[T](t: => T, e: => T): Boolean = e
+// object True extends Boolean {
 
-}
+//   def ifThenElse[T](t: => T, e: => T): Boolean = t
+
+// }
+
+// object False extends Boolean {
+
+//   def ifThenElse[T](t: => T, e: => T): Boolean = e
+
+// }

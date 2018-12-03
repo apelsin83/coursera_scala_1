@@ -3,7 +3,7 @@ object translationfor {
   def main(args: Array[String]) = {
 
     val q1 = books flatMap (b =>
-      b.authors withFilter (a => a startsWith "Bird") map (y => y.title))
+      b.authors withFilter (a => a startsWith "Bird") map (_ => b.title))
     println(q1)
   }
 

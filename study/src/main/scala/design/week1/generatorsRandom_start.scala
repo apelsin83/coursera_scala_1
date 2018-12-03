@@ -23,7 +23,7 @@ object generatorsRandom_start {
   }
 
 
-  val booleans = for(x <- integers) yield x > 0
+//  val booleans = for(x <- integers) yield x > 0
   val pairs = new Generator1[(Int, Int)] {
     def generate = (integers1.generate, integers1.generate) 
   }
